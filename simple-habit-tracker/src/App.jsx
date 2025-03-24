@@ -1,15 +1,20 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import About from './pages/About'
 
 const App = () => {
   return (
-    <>
-      <Navbar /> {/* when writing navbar like this it is like rendering a react component inside another react component */}
-      <h1>Hello There</h1>
-      <h3>testing if it works correctly</h3>
-      <Footer />
-    </>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/home' element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+        <Footer />
+      </Router>
   )
 }
 
