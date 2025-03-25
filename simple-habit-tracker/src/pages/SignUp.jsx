@@ -2,8 +2,8 @@ import React from 'react'
 
 const SignUp = () => {
   return (
-    <div>
-      
+    <div style={{color: "blue", fontSize: "24px"}}>
+      just for testing
     </div>
   )
 }
