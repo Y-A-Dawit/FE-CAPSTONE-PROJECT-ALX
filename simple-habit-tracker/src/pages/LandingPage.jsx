@@ -26,7 +26,7 @@ const LandingPage = () => {
           </div>
 
           <div>
-            <p>Quickly log your habits and monitory your progress with our user-freindly interface.</p>
+            <p>Quickly log your habits and monitor <br /> your progress with our user-freindly <br /> interface.</p>
           </div>
         </div>
 
@@ -40,7 +40,7 @@ const LandingPage = () => {
           </div>
 
           <div>
-            <p>Access comprehensive analytics to understand your habit and make informed decisions.</p>
+            <p>Access comprehensive analytics to <br /> understand your habits and make <br /> informed decisions.</p>
           </div>
         </div>
 
