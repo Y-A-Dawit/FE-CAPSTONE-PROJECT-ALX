@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
@@ -18,9 +19,27 @@ const App = () => {
   )
 }
 
+
 function Main() {
   const location = useLocation(); // "useLocation()" is a hook provided by react-router-dom that allows for accessing the current location or route of an app
-  return ( // useLocation hook must be used only inside a component that is rendered by the Router, that is why "Main" function is created and rendered inside <Router> which is inside app function so that it will be same as declaring "const location = useLocation()" inside a "Router" context
+  // useLocation hook must be used only inside a component that is rendered by the Router, that is why "Main" function is created and rendered inside <Router> which is inside app function so that it will be same as declaring "const location = useLocation()" inside a "Router" context
+  
+  // to dynamically update page title based on route
+  useEffect(() => {
+    const pageTitles = {
+      '/': 'Simple Habit Tracker',
+      '/dashboard': 'Dashboard - Simple Habit Tracker',
+      '/search': 'Search - Simple Habit Tracker',
+      '/profile': 'Profile - Simple Habit Tracker',
+      '/about': 'About - Simple Habit Tracker',
+      '/login': 'Login - Simple Habit Tracker',
+      '/signup': 'Sign Up - Simple Habit Tracker'
+    }
+  
+  document.title = pageTitles[location.pathname] || 'Simple Habit Tracker'; // Default title
+}, [location.pathname]); // Runs whenever route changes
+
+  return ( 
     <>
         {location.pathname !== "/login" && location.pathname !== "/signup" && <Navbar />} {/*checks whether the current file/location/route has has a url "signup" or "login" if not it will render navbar, and it is same for the footer*/}
         <Routes>
