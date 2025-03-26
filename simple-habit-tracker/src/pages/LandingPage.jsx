@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import './landingpage.css';
+import LandingNavbar from '../components/LandingNavbar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faChartSimple } from "@fortawesome/free-solid-svg-icons";
@@ -9,7 +10,7 @@ import React from 'react';
 const LandingPage = () => {
   return (
     <>
-
+      <LandingNavbar />
       <div className="headlineSection">
         <h1>Stay on Track with SimpleHabitTracker - Your Smart Habit Companion!</h1>
         <p style={{textAlign: "center"}}>Track your habits effortlessly and improve your daily routine. Our intuitive interface <br /> and powerful features make it easy to stay on top of your goals.</p>

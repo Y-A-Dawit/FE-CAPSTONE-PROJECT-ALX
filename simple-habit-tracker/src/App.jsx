@@ -41,7 +41,7 @@ function Main() {
 
   return ( 
     <>
-        {location.pathname !== "/login" && location.pathname !== "/signup" && <Navbar />} {/*checks whether the current file/location/route has has a url "signup" or "login" if not it will render navbar, and it is same for the footer*/}
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/" && <Navbar />} {/*checks whether the current file/location/route has has a url "signup" or "login" if not it will render navbar, and it is same for the footer*/}
         <Routes>
           <Route path='/' element={<LandingPage />} /> {/*since landingPage is already imported at the top we just need to use "/", w/c is the 'default route', and <LandingPage /> is rendering as the first things to be seen when the entire website or project is run */}
           <Route path='/dashboard' element={<Dashboard />} /> {/*in path props "URLs" are always written in small letters regardles of whether the actual file name has capital letter in it or not. and again <Dashboard /> here is being rendered*/}
