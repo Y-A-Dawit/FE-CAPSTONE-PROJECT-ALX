@@ -16,10 +16,12 @@ const styles = {
     navbar: {
         display: "flex",
         alignItems: 'center',
-        justifyContent: 'space-bbetween',
-        padding: '4px 50px',
-        boxShadow: "0px 4px 6px rgba(0,0,0,0.1)",
-        backgroundColor: "#ffffff",
+        justifyContent: 'space-between',
+        padding: '0px 20px',
+        border: "none",
+        borderBottom: "3px solid white",
+        boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
+        backgroundColor: "white",
     },
     logoContainer: {
         display: 'flex',

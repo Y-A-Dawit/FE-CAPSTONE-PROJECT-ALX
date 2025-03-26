@@ -1,9 +1,16 @@
 .f-button {
     background-color: #2A858F;
     color: white;
-    padding: 10px 20px;
     text-decoration:none;
     border-radius:0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.f-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(42, 133, 143, 0.15);
+    color:orange;
 }
 
 .s-button {
@@ -11,9 +18,13 @@
     text-decoration: none;
 }
 
+.s-button:hover {
+    color: orange;
+}
+
 .headlineSection {
     /* border: 2px solid red; */
-    margin-top:120px;
+    margin-top:60px;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -42,9 +53,11 @@
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .featureSectionNested:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
+
