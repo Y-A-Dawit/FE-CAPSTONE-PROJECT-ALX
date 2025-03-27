@@ -15,7 +15,7 @@ const LandingPage = () => {
 
         
         <h1>
-          Stay on Track with SimpleHabitTracker - Your Smart Habit Companion!
+          Stay on Track with SimpleHabitTracker - <span style={{color: '#2A858F'}}>Your Smart Habit Companion!</span>
           </h1>
 
         <p style={{textAlign: "center"}}>Track your habits effortlessly and improve your daily routine. Our intuitive interface <br /> and powerful features make it easy to stay on top of your goals.</p>

@@ -7,7 +7,7 @@ const Footer = () => {
       flexDirection: "row",
       alignItems: "self-end",
       justifyContent: "space-around",
-      height: '14.5vh',
+      height: '13.8vh',
       marginTop: "42px",
       marginBottom: "0px",
       border: "none",
@@ -16,9 +16,9 @@ const Footer = () => {
       backgroundColor: "white",}}>
       <p style={{padding: "25px", bottom: '0'}}>&copy; 2025 SimpleHabitTracker. All rights reserved.</p>
 
-      <div style={{display:'flex', gap: "15px", padding: "25px"}}>
-        <p>Privacy</p>
-        <p>Terms of Service</p>
+      <div style={{display:'flex', gap: "11px", padding: "25px"}}>
+        <p>Privacy |</p> 
+        <p>Terms of Service |</p>
         <p>Contact</p>
       </div>
     </div>
