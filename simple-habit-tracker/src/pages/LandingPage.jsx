@@ -7,6 +7,7 @@ import { faChartSimple } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-solid-svg-icons"
 import React from 'react';
 
+
 const LandingPage = () => {
   return (
     <>

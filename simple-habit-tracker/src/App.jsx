@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
-import DarkModeToggle from './components/DarkModeToggle';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
@@ -11,7 +10,6 @@ import Dashboard from './pages/Dashboard';
 import Search from './pages/Search';
 import Profile from './pages/Profile';
 import About from './pages/About';
-import './index.css';
 
 const App = () => {
   return (
@@ -42,7 +40,6 @@ function Main() {
 
   return ( 
     <>
-        <DarkModeToggle />
         {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/" && <Navbar />} {/*checks whether the current file/location/route has has a url "signup" or "login" if not it will render navbar, and it is same for the footer*/}
         <Routes>
           <Route path='/' element={<LandingPage />} /> {/*since landingPage is already imported at the top we just need to use "/", w/c is the 'default route', and <LandingPage /> is rendering as the first things to be seen when the entire website or project is run */}

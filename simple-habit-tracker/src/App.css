@@ -1,9 +1,0 @@
-:root {
-    background-color: yellow;
-}
-
-/* 
-{/* <App /> would've been used here if router provider was not used */}
-      {/* <RouterProvide can be used as a self closing tag*/}
-      {/*app.jsx not needed b/c routerProvider already handles navigation*/}
-      {/* router.js file contains teh route configuration, replacing <BrowserRouter> feature */} */
