@@ -1,5 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import faviconLogo from '../assets/faviconLogo.png'
+import {faSlash} from '@fortawesome/free-solid-svg-icons';
+import './LandingNavbar.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LandingNavbar = () => {
   return (
@@ -7,6 +11,11 @@ const LandingNavbar = () => {
         <div style={styles.logoContainer}>
             <img src={faviconLogo} alt="website-logo" style={styles.faviconLogo} />
             <h1 style={styles.websiteName}>Simple<span style={{color: ' #2A858F'}}>Habit</span>Tracker</h1>
+        </div>
+        <div style={{display:'flex', gap: '15px'}}>
+            <Link to='/signup' className="f-button" style={{marginBottom: "7px", marginTop: "0px", padding: "12px 35px"}}>Sign Up</Link>
+            <FontAwesomeIcon icon={faSlash} style={{ transform: "scaleX(-1)", marginBottom: '7px', marginTop: '0px', padding: '12px 2px', color: '#2A858F'}}/>
+            <Link to='/login' className="ss-button" style={{marginBottom: "7px", marginTop: "0px", padding: "12px 35px",}}>Login</Link>
         </div>
     </nav>
   )
