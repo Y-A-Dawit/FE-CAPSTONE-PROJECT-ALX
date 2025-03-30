@@ -4,12 +4,13 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
-import Login from './pages/Login';
-import SignUp from './pages/SignUp';
+import Login from './pages/Login.jsx';
+import SignUp from './pages/SignUp.jsx';
 import Dashboard from './pages/Dashboard';
 import Search from './pages/Search';
 import Profile from './pages/Profile';
 import About from './pages/About';
+import './app.css'
 
 const App = () => {
   return (
