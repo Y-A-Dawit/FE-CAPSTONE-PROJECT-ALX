@@ -53,9 +53,14 @@ const SignUp = () => {
           <div className="signUp-form">
             <div className="signUp-html">
               <div className="group">
-                <h1>
-                  Sign Up
-                </h1>
+                <h2 style={{textAlign: "center"}}>
+                  Sign up to Simple<span style={{color: 'orange'}}>Habit</span>Tracker
+                </h2>
+              </div>
+              <div>
+                <h6 style={{color: 'rgb(97, 95, 95)'}}>
+                  Join us today! Create an account and start your journey!
+                </h6>
               </div>
               <div className="group">
                 <label htmlFor="signup-username" className="label" style={{ color: 'black' }}>Username</label>

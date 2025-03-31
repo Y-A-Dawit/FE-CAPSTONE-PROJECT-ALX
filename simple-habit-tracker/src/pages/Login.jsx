@@ -46,7 +46,12 @@ const Login = () => {
           <div className="login-form">
             <div className="login-html">
                 <div className="group">
-                  <h1>Login</h1>
+                  <h2 style={{textAlign: 'center'}}>Login to Simple<span style={{color: 'orange'}}>Habit</span>Tracker</h2>
+                </div>
+                <div>
+                  <h6 style={{color: 'rgb(97, 95, 95)'}}>
+                    Welcome back! Please login to continue
+                  </h6>
                 </div>
                 <div className="group stack">
                   <label htmlFor="email" className="label" style={{ color: 'black' }}>Email</label>

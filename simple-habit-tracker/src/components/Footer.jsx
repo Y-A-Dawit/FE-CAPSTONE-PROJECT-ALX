@@ -7,7 +7,7 @@ const Footer = () => {
       flexDirection: "row",
       alignItems: "self-end",
       justifyContent: "space-around",
-      height: '13.8vh',
+      height: '10vh',
       marginTop: "36px",
       marginBottom: "0px",
       border: "none",

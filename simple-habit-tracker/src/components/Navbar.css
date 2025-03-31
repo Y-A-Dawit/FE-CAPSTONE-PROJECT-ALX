@@ -1,0 +1,23 @@
+.NavLink {
+    text-decoration: none;
+    color:black;
+    /* border:2px solid blue; */
+    padding:15px;
+}
+
+.NavLink:hover {
+    color: orange;
+    background: #2A858F;
+    border-radius:10px;
+    /* border:2px solid red; */
+}
+
+.Nav {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    gap:45px;
+    margin-right: 70px;
+    padding:20px;
+    /* border:2px solid red */
+}
