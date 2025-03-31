@@ -1,6 +1,6 @@
 /* body {
     font-family: Arial, sans-serif;
-    background: #f4f7f6;
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +30,7 @@
 .group {
     margin-bottom: 15px;
     text-align: left;
+    /* border: 2px solid red; */
 }
 
 .group label {
@@ -45,6 +46,15 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+    /* border:2px solid orange; */
+}
+
+.group button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 4px;
+    margin-left: 8px;
 }
 
 .button {
@@ -66,8 +76,8 @@
 .hr {
     margin: 20px 0;
     height: 1px;
-    background: #ccc;
     border: none;
+    margin-left: 17px;
 }
 
 .foot-lnk {
@@ -82,4 +92,12 @@
 
 .foot-lnk label:hover {
     color: #2A858F;
+}
+
+.toL {
+    color: #2A858F;
+}
+
+.toL:hover {
+    color: orange;
 }
