@@ -1,11 +1,16 @@
 import React from 'react'
+import Sidebar from '../components/Sidebar'
+import './Dashboard.css';
 
 const Dashboard = () => {
+
   return (
-    <div>
-      this is the dashboard
-    </div>
-  )
+    <>
+      <div className='dash'>
+        <Sidebar />
+      </div>
+    </>
+  ) 
 }
 
 export default Dashboard

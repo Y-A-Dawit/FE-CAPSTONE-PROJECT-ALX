@@ -13,7 +13,6 @@ const Navbar = () => {
           </div>
           <div className="Nav">
             <Link to='/dashboard' className="NavLink">Dashboard</Link> {/*here "Link" is like anchor tag with href, but without connecting to a network server will it connect to other page for rendering*/}
-            <Link to='/search' className="NavLink">Search</Link>
             <Link to='/profile' className="NavLink">Profile</Link>
             <Link to='/about' className="NavLink">About</Link>
           </div>
