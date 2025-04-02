@@ -1,5 +1,5 @@
 .dash {
-    width:100vw;
+    width:300px;
     height:100vh;
     background-color: white;
 }
@@ -7,12 +7,14 @@
 body {
     margin:0;
     padding:0;
+    overflow: hidden;
 }
 
 .Sidebar {
     height: 100%;
-    width: 300px;
+    width: 270px;
     background-color:#2A858F;
+    border:2px solid #2A858F;
     margiin:0;
 }
 
@@ -69,3 +71,9 @@ body {
     flex-direction: row;
     align-items:center;
 }
+
+.dashBoardContainer {
+    display:flex;
+    flex-direction:row;
+}
+
