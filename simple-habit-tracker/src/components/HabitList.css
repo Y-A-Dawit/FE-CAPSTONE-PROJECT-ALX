@@ -4,6 +4,7 @@
     align-items:center;
     justify-content: space-evenly;
     gap: 120px;
+    /* border: 2px solid red; */
 }
 
 #habit-app {
@@ -16,7 +17,13 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    border:none;
+    /* border: 2px solid orange; */
+}
+
+@media (max-width:1200px) {
+    #habit-app {
+        width: 600px;
+    }
 }
 
 .Habit-Container {
@@ -97,18 +104,11 @@
     cursor:pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width:1000px) {
+    .dash-Container {
+        width: 
+    }
+}
 
 
 

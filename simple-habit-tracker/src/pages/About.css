@@ -1,0 +1,50 @@
+.about-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-header {
+    background: #2a858f;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .about-section {
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #ff6347;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .about-section h2 {
+    color: #2a858f;
+  }
+  
+  .about-section p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .about-section ul {
+    padding-left: 20px;
+  }
+  
+  .about-section li {
+    font-size: 15px;
+    color: #444;
+  }
+  

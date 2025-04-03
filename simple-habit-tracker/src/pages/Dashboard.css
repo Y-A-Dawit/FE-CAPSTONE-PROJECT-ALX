@@ -77,3 +77,6 @@ body {
     flex-direction:row;
 }
 
+.main-content {
+    overflow-x: auto;
+}

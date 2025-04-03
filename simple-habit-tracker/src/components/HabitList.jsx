@@ -152,7 +152,7 @@ const HabitList = () => {
                             ))}
                         </ul>
                         <div style={{marginTop: '7px', fontWeight:'bold', padding: "0px"}}>
-                            <h3>Streak:</h3>
+                            <h3>Streak:<span style={{color: "gray", fontSize: '8px'}}>  this shows the number of days you keep committed to! </span></h3>
                             <ul style={{overflowY: "auto", height: "100px"}}>
                                 {Object.entries(streaks).map(([task, count]) => (
                                     <li key={task}>{task}: {count} day</li>
@@ -162,7 +162,7 @@ const HabitList = () => {
                     </div>
                 </div>
             </div>
-            <div style={{padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '8px', textAlign: 'center', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', width: '100%' }}>
+            <div className="MotivationSection" style={{padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '8px', textAlign: 'center', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', width: '100%' }}>
                 <h3>💡 Daily Motivation</h3>
                 <p style={{ fontStyle: 'italic', fontSize: '16px', color: '#555' }}>
                     "{randomQuote}"
