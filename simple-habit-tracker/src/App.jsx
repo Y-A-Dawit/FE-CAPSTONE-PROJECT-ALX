@@ -7,7 +7,6 @@ import LandingPage from './pages/LandingPage';
 import Login from './pages/Login.jsx';
 import SignUp from './pages/SignUp.jsx';
 import Dashboard from './pages/Dashboard';
-// import Sidebar from './components/Sidebar.jsx';
 import Profile from './pages/Profile.jsx';
 import About from './pages/About.jsx';
 import './app.css'

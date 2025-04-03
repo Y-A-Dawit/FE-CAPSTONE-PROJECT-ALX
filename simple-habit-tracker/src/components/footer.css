@@ -1,0 +1,15 @@
+.footer p:hover {
+    transform: translateY(-5px);
+    cursor:pointer;
+    color: #2a858f;
+    transition: 0.2s ease-in-out;
+}
+
+.footer a {
+    text-decoration:none;
+    color:black;
+}
+
+.footer p a:hover {
+    color: #2a858f;
+}

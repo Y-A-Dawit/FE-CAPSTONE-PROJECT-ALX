@@ -1,4 +1,5 @@
 import React from 'react'
+import './footer.css'
 
 const Footer = () => {
   return (
@@ -16,10 +17,10 @@ const Footer = () => {
       backgroundColor: "white",}}>
       <p style={{padding: "25px", bottom: '0'}}>&copy; 2025 SimpleHabitTracker. All rights reserved.</p>
 
-      <div style={{display:'flex', gap: "11px", padding: "25px", marginTop: '36px'}}>
-        <p>Privacy |</p> 
-        <p>Terms of Service |</p>
-        <p>Contact</p>
+      <div className="footer" style={{display:'flex', gap: "11px", padding: "25px", marginTop: '36px'}}>
+        <p><a href="#Privacy">Privacy</a> |</p>
+        <p><a href="#TermsofService">Terms of Service</a> |</p>
+        <p><a href="Contact">Contact</a></p>
       </div>
     </div>
   )

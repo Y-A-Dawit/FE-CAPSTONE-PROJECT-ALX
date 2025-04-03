@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar'
-import TodoList from '../components/TodoList.jsx';
+import HabitList from '../components/HabitList.jsx';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -13,7 +13,7 @@ const Dashboard = () => {
           </div>
 
           <div className="main-content">
-            <TodoList />
+            <HabitList />
           </div>
         </div>
     </div>
