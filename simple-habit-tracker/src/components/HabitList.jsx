@@ -2,21 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaPlus } from "react-icons/fa";
 import { faSquare, faCheckSquare } from "@fortawesome/free-solid-svg-icons";
+import { Sparkles } from 'lucide-react';
 import './HabitList.css';
 
-const motivationalQuotes = [
-    "Success is the sum of small efforts, repeated day in and day out.",
-    "Your future is created by what you do today, not tomorrow.",
-    "Small daily improvements are the key to staggering long-term results.",
-    "The secret of getting ahead is getting started.",
-    "Don't break the chain! Stay consistent.",
-    "The only way to do great work is to love what you do",
-    "Believe you can and you're halfway there!",
-    "Don't watch the clock, do what it does. Keep Going!",
-    "The future belongs to those who believe in the beuty of their dreams!",
-    "The difference between ordinary and extraordinary is that little extra",
-    
-];
 
 const HabitList = () => {
     const [tasks, setTasks] = useState([]); 
@@ -24,11 +12,29 @@ const HabitList = () => {
     const [completedTasks, setCompletedTasks] = useState({});
     const [streaks, setStreaks] = useState({});
     const [searchTerm, setSearchTerm] = useState('');
-    const [motivation, setMotivation] = useState('')
-
-    // const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+    const [quote, setQuote] = useState('');
 
   useEffect(() => {
+    const quotes = [
+        "Success is the sum of small efforts, repeated day in and day out.",
+        "Your future is created by what you do today, not tomorrow.",
+        "Small daily improvements are the key to staggering long-term results.",
+        "The secret of getting ahead is getting started.",
+        "Don't break the chain! Stay consistent.",
+        "The only way to do great work is to love what you do",
+        "Believe you can and you're halfway there!",
+        "Don't watch the clock, do what it does. Keep Going!",
+        "The future belongs to those who believe in the beuty of their dreams!",
+        "The difference between ordinary and extraordinary is that little extra",
+        "Start where you are. Use what you have. Do what you can.",
+        "Small daily improvements are the key to staggering long-term results.",
+        "You don't have to be extreme, just consistent.",
+        "Your habits will determine your future.",
+        "Discipline is choosing between what you want now and what you want most.",
+        "Don't wait. The time will never be just right.",
+        "Motivation gets you going, but discipline keeps you growing."
+    ];
+
     const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
     setTasks(storedTasks);
     
@@ -38,14 +44,8 @@ const HabitList = () => {
     const storedStreaks = JSON.parse(localStorage.getItem('streaks') || '{}');
     setStreaks(storedStreaks);
 
-    const storedMotivation = localStorage.getItem('motivation');
-    if (storedMotivation) {
-        setMotivation(storedMotivation);
-    } else {
-        const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
-        setMotivation(randomQuote);
-        localStorage.setItem("motivation", randomQuote);
-    }
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    setQuote(quotes[randomIndex]);
 
     const lastReset = localStorage.getItem('lastReset');
     if (!lastReset || new Date().getTime() - lastReset > 24 * 60 * 60 *1000) {
@@ -181,11 +181,16 @@ const HabitList = () => {
                     </div>
                 </div>
             </div>
-            <div className="MotivationSection" style={{padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '8px', textAlign: 'center', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', width: '100%' }}>
-                <h3>💡 Daily Motivation</h3>
-                <p style={{ fontStyle: 'italic', fontSize: '16px', color: '#555' }}>
-                    "{motivation}"
-                </p>
+            <div className="MotivationSection" style={{padding: '20px', backgroundColor: "#f5f5f5", borderRadius: '8px', textAlign: "center", boxShadow: '5px 4px 8px rgba(0,0,0,0.1)', width: '550px', marginRight: '10px'}}>
+                <h3 style={{display: 'flex', flexDirection: 'row', gap: "15px", textAlign: 'center'}}> 
+                    <div>
+                        <Sparkles />
+                    </div>
+                    <div>
+                        Daily Motivation
+                    </div>
+                </h3>
+                <p style={{fontStyle: "italic"}}>"{quote}"</p>
             </div>
         </div>
     </>
