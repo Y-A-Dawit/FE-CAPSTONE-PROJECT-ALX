@@ -7,7 +7,6 @@ SimpleHabitTracker is a minimalist habit tracking web app built as part of the A
 ## How to Install & Run the Project
 
 1. Clone the repository:
-
 [Clone the repository](https://github.com/Y-A-Dawit/FE-CAPSTONE-PROJECT-ALX.git)
 
 1. Navigate into the React app folder:
