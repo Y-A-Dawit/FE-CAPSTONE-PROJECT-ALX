@@ -1,7 +1,6 @@
 .NavLink {
     text-decoration: none;
     color:black;
-    /* border:2px solid blue; */
     padding:15px;
 }
 
@@ -9,7 +8,6 @@
     color: orange;
     background: #2A858F;
     border-radius:10px;
-    /* border:2px solid red; */
 }
 
 .Nav {
@@ -19,5 +17,4 @@
     gap:45px;
     margin-right: 70px;
     padding:20px;
-    /* border:2px solid red */
 }

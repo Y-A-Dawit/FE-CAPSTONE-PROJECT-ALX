@@ -37,7 +37,7 @@ const Login = () => {
         return;
       }
 
-      setErrors({}); // this one will help clear the error if validation passes
+      setErrors({}); 
 
       setTimeout(() => {
         navigate('/dashboard');

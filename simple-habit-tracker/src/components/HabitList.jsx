@@ -27,7 +27,6 @@ const HabitList = () => {
         "The future belongs to those who believe in the beuty of their dreams!",
         "The difference between ordinary and extraordinary is that little extra",
         "Start where you are. Use what you have. Do what you can.",
-        "Small daily improvements are the key to staggering long-term results.",
         "You don't have to be extreme, just consistent.",
         "Your habits will determine your future.",
         "Discipline is choosing between what you want now and what you want most.",
@@ -124,12 +123,12 @@ const HabitList = () => {
                             />
                     </div>
                     <div>
-                        <h2 style={{marginLeft: "8%", marginBottom: '0'}}>
+                        <h2 style={{marginBottom: '0'}}>
                             Habits
                         </h2>
                     </div>
 
-                    <div id="habit-app">
+                    <div id="habit-app" style={{}}>
                         <div id="AddInput">
                             <input
                                 type="text"
@@ -171,7 +170,7 @@ const HabitList = () => {
                             ))}
                         </ul>
                         <div style={{marginTop: '7px', fontWeight:'bold', padding: "0px"}}>
-                            <h3>Streak:<span style={{color: "gray", fontSize: '8px'}}>  this shows the number of days you keep committed to! </span></h3>
+                            <h3>Streak:<span style={{color: "gray", fontSize: '15px'}}>  this shows the number of days you keep committed to! </span></h3>
                             <ul style={{overflowY: "auto", height: "100px"}}>
                                 {Object.entries(streaks).map(([task, count]) => (
                                     <li key={task}>{task}: {count} day</li>
@@ -190,7 +189,7 @@ const HabitList = () => {
                         Daily Motivation
                     </div>
                 </h3>
-                <p style={{fontStyle: "italic"}}>"{quote}"</p>
+                <p style={{fontStyle: "italic", fontSize:'18px'}}>"{quote}"</p>
             </div>
         </div>
     </>

@@ -8,9 +8,9 @@ const Sidebar = () => {
   return (
     <>
         <div className="Sidebar">
-            <div className="webName" style={{ ...styles.logoContainer, width: "180px", flexShrink: '0', marginTop: '25px', marginLeft: '4px', gap: '0px'}}>
-                <img src={faviconLogo} alt="website-logo" style={{ ...styles.faviconLogo, width: '25px', height: '25px', backgroundColor: "white", borderRadius: '30px'}} />
-                <h1 style={{ ...styles.websiteName, fontSize: '18px'}} >Simple<span style={{color: ' orange'}}>Habit</span>Tracker</h1> {/*using spread operator possible to merge styles*/}
+            <div className="webName" style={{ ...styles.logoContainer, flexShrink: '0', marginTop: '0px', marginLeft: '0px', gap: '0px'}}>
+                <img src={faviconLogo} alt="website-logo" style={{ ...styles.faviconLogo, borderRadius: '30px'}} />
+                <h1 style={{ ...styles.websiteName}} >Simple<span style={{color: ' orange'}}>Habit</span>Tracker</h1> {/*using spread operator it is possible to merge styles just like this*/}
             </div>
             <ul className="SidebarList">
                 {SidebarData.map((val, key)=> {
@@ -50,7 +50,6 @@ const styles = {
         marginRight: "10px",
     },
     websiteName: {
-        fontSize: "1.5rem",
         fontWeight: 'bold',
         color: '#333',
         width:"180px"

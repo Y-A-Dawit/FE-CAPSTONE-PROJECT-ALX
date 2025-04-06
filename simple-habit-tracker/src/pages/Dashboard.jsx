@@ -2,8 +2,6 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import HabitList from '../components/HabitList.jsx';
 import './Dashboard.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Dashboard = () => {  
   return (

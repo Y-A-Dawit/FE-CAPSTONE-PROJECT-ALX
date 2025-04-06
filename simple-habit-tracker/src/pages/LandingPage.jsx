@@ -24,7 +24,7 @@ const LandingPage = () => {
       <p style={{textAlign: "center", marginTop: "0px"}}>Already have an account? <Link to='/login' className="s-button">Login here!</Link> </p>
       
       <div className="featureSection">
-        <div className="featureSectionNested"> {/*first*/}
+        <div className="featureSectionNested">
           <div className="icon-container">
             <FontAwesomeIcon icon={faCheck} size="2x" style={{color: "#2A858F"}} />
           </div>
@@ -38,7 +38,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="featureSectionNested"> {/*second*/}
+        <div className="featureSectionNested">
           <div className="icon-container">
             <FontAwesomeIcon icon={faChartSimple} size="2x" style={{color: "#2A858F"}} />
           </div>
@@ -52,7 +52,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="featureSectionNested"> {/*third*/}
+        <div className="featureSectionNested">
           <div className="icon-container">
             <FontAwesomeIcon icon={faBell} size="2x" style={{color: "#2A858F"}} />
           </div>

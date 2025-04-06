@@ -12,7 +12,7 @@ const Navbar = () => {
             <h1 style={styles.websiteName}>Simple<span style={{color: ' #2A858F'}}>Habit</span>Tracker</h1>
           </div>
           <div className="Nav">
-            <Link to='/dashboard' className="NavLink">Dashboard</Link> {/*here "Link" is like anchor tag with href, but without connecting to a network server will it connect to other page for rendering*/}
+            <Link to='/dashboard' className="NavLink">Dashboard</Link>
             <Link to='/profile' className="NavLink">Profile</Link>
             <Link to='/about' className="NavLink">About</Link>
           </div>

@@ -4,7 +4,6 @@
     align-items:center;
     justify-content: space-evenly;
     gap: 40px;
-    /* border: 2px solid red; */
 }
 
 #habit-app {
@@ -17,12 +16,22 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    /* border: 2px solid orange; */
 }
 
 @media (max-width:1200px) {
     #habit-app {
         width: 600px;
+    }
+}
+.Habit-Container div div h2 {
+    marginLeft: 8%;
+}
+@media (max-width:768px) {
+    #habit-app {
+        width:570px;
+    }
+    .Habit-Container div div h2 {
+        margin-left:12%;
     }
 }
 
@@ -39,8 +48,6 @@
     flex-direction:row;
     gap:130px;
     border:none;
-    /* border: 2px solid red; */
-
 }
 
 #AddInput {

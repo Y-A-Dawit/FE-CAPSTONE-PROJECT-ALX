@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./About.css";
 
 const About = () => {
@@ -29,10 +31,14 @@ const About = () => {
             Key Features:
           </p>
           <ul>
-            <li>✔ Add & remove habits</li>
-            <li>✔ Streak counter for motivation</li>
-            <li>✔ Search bar to find habits quickly</li>
-            <li>✔ Responsive & user-friendly interface</li>
+            <li><FontAwesomeIcon icon={faCheck} style={{ color: '#2A858F', fontSize: '24px' ,marginRight: '10px'}} />
+              Add & remove habits</li>
+            <li><FontAwesomeIcon icon={faCheck} style={{ color: '#2A858F', fontSize: '24px' ,marginRight: '10px'}} />
+              Streak counter for motivation</li>
+            <li><FontAwesomeIcon icon={faCheck} style={{ color: '#2A858F', fontSize: '24px' ,marginRight: '10px'}} />
+              Search bar to find habits quickly</li>
+            <li><FontAwesomeIcon icon={faCheck} style={{ color: '#2A858F', fontSize: '24px' ,marginRight: '10px'}} />
+              Responsive & user-friendly interface</li>
           </ul>
         </div>
       </div>

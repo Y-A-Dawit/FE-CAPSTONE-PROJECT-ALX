@@ -13,7 +13,7 @@ const LandingNavbar = () => {
             <h1 style={styles.websiteName}>Simple<span style={{color: ' #2A858F'}}>Habit</span>Tracker</h1>
         </div>
         <div style={{display:'flex', gap: '15px'}}>
-            <Link to='/signup' className="f-button" style={{marginBottom: "7px", marginTop: "0px", padding: "12px 35px"}}>Sign Up</Link>
+            <Link to='/signup' className="f-button" style={{marginBottom: "7px", marginTop: "0px", border:'none'}}>Sign Up</Link>
             <FontAwesomeIcon className="slash" icon={faSlash} style={{ transform: "scaleX(-1) rotate(25deg)", marginBottom: '7px', marginTop: '0px', padding: '12px 2px', color: '#2A858F',  fontSize: "25px"}}/>
             <Link to='/login' className="ss-button" style={{marginBottom: "7px", marginTop: "0px", padding: "12px 35px"}}>Login</Link>
         </div>
