@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './profile.css';
+import './Profile.css';
 
 const Profile = () => {
   const [fullName, setFullName] = useState("");
