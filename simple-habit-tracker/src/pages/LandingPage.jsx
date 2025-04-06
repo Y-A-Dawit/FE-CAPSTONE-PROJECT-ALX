@@ -34,7 +34,7 @@ const LandingPage = () => {
           </div>
 
           <div>
-            <p style={{textAlign: "center"}} >Quickly log your habits and monitor <br /> your progress with our user-freindly <br /> interface.</p>
+            <p className="TextContent" style={{textAlign: "center"}} >Quickly log your habits and monitor <br /> your progress with our user-freindly <br /> interface.</p>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ const LandingPage = () => {
           </div>
 
           <div>
-            <p style={{textAlign: "center"}}>Access comprehensive analytics to <br /> understand your habits and make <br /> informed decisions.</p>
+            <p className="TextContent" style={{textAlign: "center"}}>Access comprehensive analytics to <br /> understand your habits and make <br /> informed decisions.</p>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ const LandingPage = () => {
           </div>
 
           <div>
-            <p style={{textAlign: "center"}}>Set reminders to keep you on track <br /> and never miss a habit again.</p>
+            <p className="TextContent" style={{textAlign: "center"}}>Set reminders to keep you on track <br /> and never miss a habit again.</p>
           </div>
         </div>
       </div>

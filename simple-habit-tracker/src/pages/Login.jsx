@@ -10,30 +10,34 @@ const Login = () => {
     /* this code snippet/piece of code is for handling empty form submission, */
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
+    const [errors, setErrors] = useState("");
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   
     const handleLoginSubmission = (e) => {
       e.preventDefault();
+      const newErrors = {};
 
-      if (!email || !password) {
-        setError('Please fill in all the fields');
+
+      if (!email) {
+        newErrors.email = "Email is required";
+      } else if (!emailRegex.test(email)) {
+        newErrors.email = "Please enter a valid email";
+      }
+  
+      if (!password) {
+        newErrors.password = "Password is required";
+      } else if (!passwordRegex.test(password)) {
+        newErrors.password = "Password must be at least 8 characters long, with 1 uppercase, 1 number, and 1 special character.";
+      }
+  
+      if (Object.keys(newErrors).length > 0) {
+        setErrors(newErrors);
         return;
       }
 
-      if (!emailRegex.test(email)) {
-        setError('Please enter a valid email');
-        return;
-      }
-
-      if (!passwordRegex.test(password)) {
-        setError("Password must be at least 8 characters long, with 1 uppercase, 1 number, and 1 special character.");
-        return;
-      }
-
-      setError(""); // this one will help clear the error if validation passes
+      setErrors({}); // this one will help clear the error if validation passes
 
       setTimeout(() => {
         navigate('/dashboard');
@@ -56,10 +60,12 @@ const Login = () => {
                 <div className="group stack">
                   <label htmlFor="email" className="label" style={{ color: 'black' }}>Email</label>
                   <input id="email" placeholder="Enter Email" type="email" className="input" onChange={(e) => setEmail(e.target.value)} />
+                  {errors.email && <small style={{ color: 'red' }}>{errors.email}</small>}
                 </div>
                 <div className="group stack">
                   <label htmlFor="password" className="label" style={{ color: 'black' }}>Password</label>
                   <input id="password" type="password" placeholder="Enter Password" className="input" data-type="password" onChange={(e) => setPassword(e.target.value)} />
+                  {errors.password && <small style={{ color: 'red' }}>{errors.password}</small>}
                 </div>
                 <div className="checkbox" style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                   <input id="keep-signed-in" type="checkbox" className="check" defaultChecked />
@@ -81,7 +87,6 @@ const Login = () => {
                 </div>
             </div>
           </div>
-          {error && <p style={{ color: 'red'}}>{error}</p>}
         </form>
       </>
   )

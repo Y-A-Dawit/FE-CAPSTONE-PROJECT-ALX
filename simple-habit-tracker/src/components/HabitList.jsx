@@ -9,7 +9,13 @@ const motivationalQuotes = [
     "Your future is created by what you do today, not tomorrow.",
     "Small daily improvements are the key to staggering long-term results.",
     "The secret of getting ahead is getting started.",
-    "Don't break the chain! Stay consistent."
+    "Don't break the chain! Stay consistent.",
+    "The only way to do great work is to love what you do",
+    "Believe you can and you're halfway there!",
+    "Don't watch the clock, do what it does. Keep Going!",
+    "The future belongs to those who believe in the beuty of their dreams!",
+    "The difference between ordinary and extraordinary is that little extra",
+    
 ];
 
 const HabitList = () => {
@@ -18,8 +24,9 @@ const HabitList = () => {
     const [completedTasks, setCompletedTasks] = useState({});
     const [streaks, setStreaks] = useState({});
     const [searchTerm, setSearchTerm] = useState('');
+    const [motivation, setMotivation] = useState('')
 
-    const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+    // const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
@@ -31,6 +38,15 @@ const HabitList = () => {
     const storedStreaks = JSON.parse(localStorage.getItem('streaks') || '{}');
     setStreaks(storedStreaks);
 
+    const storedMotivation = localStorage.getItem('motivation');
+    if (storedMotivation) {
+        setMotivation(storedMotivation);
+    } else {
+        const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+        setMotivation(randomQuote);
+        localStorage.setItem("motivation", randomQuote);
+    }
+
     const lastReset = localStorage.getItem('lastReset');
     if (!lastReset || new Date().getTime() - lastReset > 24 * 60 * 60 *1000) {
         resetCompletion();
@@ -39,16 +55,19 @@ const HabitList = () => {
 
   const addTask = (taskText) => {
     if (taskText.trim() === '') {
-      alert('Enter a task!');
+      alert('Enter a habit!');
       return;
+    }
+
+    if (taskText.trim().length > 10) {
+        alert("Habit character cannot exceed more than 10!");
+        return;
     }
 
     const newTask = taskText.trim();
     const updatedTasks = [...tasks, newTask];
-
     setTasks(updatedTasks);
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-
     setTaskInput('');
   };
 
@@ -141,7 +160,7 @@ const HabitList = () => {
                                         style={{ textDecoration: completedTasks[task] ? 'line-through' : 'none', opacity: completedTasks[task] ? 0.5 : 1 }}>
                                         {task}
                                     </span>
-                                    <button className="remove-btn" onClick={() => removeTask(task)}>
+                                    <button style={{width: "90px", height: "35px"}} className="remove-btn" onClick={() => removeTask(task)}>
                                     Remove
                                     </button>
                                 </div>
@@ -165,7 +184,7 @@ const HabitList = () => {
             <div className="MotivationSection" style={{padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '8px', textAlign: 'center', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', width: '100%' }}>
                 <h3>💡 Daily Motivation</h3>
                 <p style={{ fontStyle: 'italic', fontSize: '16px', color: '#555' }}>
-                    "{randomQuote}"
+                    "{motivation}"
                 </p>
             </div>
         </div>

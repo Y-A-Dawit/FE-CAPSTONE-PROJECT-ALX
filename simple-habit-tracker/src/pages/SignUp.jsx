@@ -11,37 +11,35 @@ const SignUp = () => {
       const [email, setEmail] = useState("");
       const [password, setPassword] = useState("");
       const [repeatPassword, setRepeatPassword] = useState("")
-      const [error, setError] = useState("");
+      const [errors, setErrors] = useState({});
     
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
   const handleSignUpSubmission = (e) => {
     e.preventDefault();
+    const newErrors = {};
 
-    if (!email || !password || !username || !repeatPassword) {
-      setError('Please fill in all the fields');
-      return;
+
+    if (!username) newErrors.username = "Username is required";
+    if (!email) newErrors.email = "Email is required";
+    else if (!emailRegex.test(email)) newErrors.email = "Please enter a valid email!";
+
+    if (!password) newErrors.password = "Password is required";
+    else if (!passwordRegex.test(password)) {
+      newErrors.password = "Password must be at least 8 characters long, with 1 uppercase, 1 number, and 1 special character.";
     }
 
-
-    if (!emailRegex.test(email)) {
-      setError('Please enter a valid email!');
-      return;
+    if(!repeatPassword) newErrors.repeatPassword = "Please repeat your password";
+    else if (password !== repeatPassword) {
+      newErrors.repeatPassword = "Passwords do not match!";
     }
 
-    if (!passwordRegex.test(password)) {
-      setError("Password must be at least 8 characters long, with 1 uppercase, 1 number, and 1 special character.");
-      return;
-    }
+    setErrors(newErrors);
 
-    if (password !== repeatPassword) {
-      setError("Passwords do not match!")
-      return;
-    }
+    if(Object.keys(newErrors).length > 0) return;
 
-    setError("");
-
+    setErrors({});
     setTimeout (() => {
       navigate('/dashboard');
     }, 450)
@@ -65,18 +63,22 @@ const SignUp = () => {
               <div className="group">
                 <label htmlFor="signup-username" className="label" style={{ color: 'black' }}>Username</label>
                 <input id="signup-username" type="text" className="input" placeholder='Enter Username' onChange={(e) => setUsername(e.target.value)} />
+                {errors.username && <p style={{ color: 'red', fontSize: '12px' }}>{errors.username}</p>}
               </div>
               <div className="group">
                 <label htmlFor="signup-password" className="label" style={{ color: 'black' }}>Password</label>
                 <input id="signup-password" type="password" className="input" data-type="password" placeholder='Enter Password' onChange={(e) => setPassword(e.target.value)} />
+                {errors.password && <p style={{ color: 'red', fontSize: '12px' }}>{errors.password}</p>}
               </div>
               <div className="group">
                 <label htmlFor="repeat-password" className="label" style={{ color: 'black' }}>Repeat Password</label>
                 <input id="repeat-password" type="password" className="input" data-type="password" placeholder='Repeat password' onChange={(e) => setRepeatPassword(e.target.value)} />
+                {errors.repeatPassword && <p style={{ color: 'red', fontSize: '12px' }}>{errors.repeatPassword}</p>}
               </div>
               <div className="group">
                 <label htmlFor="email" className="label" style={{ color: 'black' }}>Email Address</label>
                 <input id="email" type="text" className="input" placeholder='Enter Email' onChange={(e) => setEmail(e.target.value)} />
+                {errors.email && <p style={{ color: 'red', fontSize: '12px' }}>{errors.email}</p>}
               </div>
               <div className="group">
               <button onClick={handleSignUpSubmission} className='button' style={{backgroundColor: '#2A8858F'}}>
@@ -91,7 +93,6 @@ const SignUp = () => {
               </div>
             </div>
           </div>
-        {error && <p style={{ color: 'red'}}>{error}</p>}
         </form>
         </>
   );
